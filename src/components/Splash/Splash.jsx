@@ -5,6 +5,8 @@ import { CrawlingSVG } from "../common/SimpleSVGs";
 import leftCircuit from "../../assets/left-circuit-fill.svg";
 import rightCircuit from "../../assets/right-circuit-fill.svg";
 import Dropdown from "../Dropdown/Dropdown";
+import SpawnComponent from "../SpawnComponent/SpawnComponent";
+import { spawns } from "../../utils/demo-data";
 
 const Splash = () => {
   return (
@@ -23,7 +25,11 @@ const Splash = () => {
           <Dropdown title="Latest" different="true" />
         </div>
       </div>
-      <div className="splash__bottom"></div>
+      <div className="splash__bottom">
+        {spawns.map((spawn, i) => (
+          <SpawnComponent key={i} {...spawn} />
+        ))}
+      </div>
     </div>
   );
 };

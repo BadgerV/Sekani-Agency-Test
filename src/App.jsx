@@ -11,10 +11,10 @@ function App() {
   // }, []);
 
   return (
-    <>
+    <div className="App">
       <Navbar />
       <Splash />
-    </>
+    </div>
   );
 }
 
