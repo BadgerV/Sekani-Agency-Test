@@ -1,0 +1,47 @@
+.splash {
+  background-color: var(--accent-color);
+  min-height: 5rem;
+  padding-top: 0.3rem;
+}
+
+.splash__top {
+  position: relative;
+}
+
+.splash__middle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+
+  gap: 2rem;
+}
+
+.splash__middle--left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.splash__middle--left span {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.splash__middle--left img {
+  width: 12rem;
+}
+
+.splash__middle--right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dropdown-button {
+  padding: 0.7rem 3rem;
+  background-color: var(--ninth-color);
+}

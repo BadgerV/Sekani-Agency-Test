@@ -1,0 +1,20 @@
+/* SimpleSVG.css */
+
+.first-svg,
+.second-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.second-svg {
+  stroke-dasharray: 1991.6153564453125;
+  stroke-dashoffset: 1991.6153564453125;
+  animation: dash 20s linear forwards infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

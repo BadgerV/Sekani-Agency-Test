@@ -1,0 +1,38 @@
+:root {
+  --primary-color: #74e9fc;
+  --primary-color-transparent: rgba(116, 233, 252, 0.1);
+  --secondary-color: #000615;
+  --tertiary-color: #000610;
+  --accent-color: #001431;
+  --fifth-color: #0f1520;
+  --sixth-color: #001f47;
+  --seventh-color: #000d20;
+  --accent-color: #001431;
+  --ninth-color: #003663;
+  --secondary-text-color: #5b5e64;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url("./assets/trebuc.ttf");
+}
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+button {
+  font-family: "Trebuchet MS", sans-serif;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}

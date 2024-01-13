@@ -1,0 +1,82 @@
+/* Dropdown.css */
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown__container {
+  position: relative;
+}
+
+.dropdown__select {
+  padding: 10px 0;
+  width: 5rem;
+  text-align: center;
+  background-color: var(--seventh-color);
+  color: var(--secondary-text-color);
+  font-size: 0.8rem;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+
+  transition: 0.3s all ease-in-out;
+
+  display: flex;
+  align-items: center;
+}
+.dropdown__select:hover {
+  color: white;
+}
+
+.dropdown__select:hover {
+  background-color: #2980b9; /* Hover background color */
+}
+
+.dropdown__option {
+  /* Additional styles for dropdown options if needed */
+  color: black;
+}
+
+.dropdown__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: #fff; /* Icon color */
+  outline: 1px solid red;
+}
+
+/* Uncomment the following if you want to show selected option */
+/*
+.dropdown__selected-option {
+  margin-top: 10px;
+  background-color: #3498db; // Background color for the selected option
+  color: #fff; // Text color for the selected option
+  padding: 10px;
+  border-radius: 4px;
+}
+*/
+
+/* Styling the custom indicator */
+.dropdown__custom-arrow {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: var(--secondary-text-color); /* Arrow color */
+  font-size: 0.7rem;
+}
+
+/* Hover styles for the custom indicator */
+select:hover + .dropdown__custom-arrow {
+  color: white; /* Hover color */
+}
+
