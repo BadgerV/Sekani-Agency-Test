@@ -2,7 +2,10 @@ import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import { setTopHeightSecond } from "../../redux/slices/generalSlice";
+import {
+  setHeightOfBottomScroller,
+  setTopHeightSecond,
+} from "../../redux/slices/generalSlice";
 import SpawnComponent from "../SpawnComponent/SpawnComponent";
 import Dropdown from "../Dropdown/Dropdown";
 import { BackgroundSVG, CrawlingSVG } from "../common/SimpleSVGs";
@@ -38,42 +41,65 @@ const Splash = () => {
   }, [dispatch, splashFirstTopHeight, splashSecondTopHeight]);
 
   const scrollHandler = (direction) => {
-  const targetHeight = bottomScroller.current.scrollHeight;
-  const currentScrollTop = bottomScroller.current.scrollTop;
-  let distance =
-    direction === "up" ? -currentScrollTop : targetHeight - currentScrollTop;
-  const steps = 30; // Adjust the number of steps for smoothness
-  const scrollStep = distance / steps;
+    const targetHeight = bottomScroller.current.scrollHeight;
+    const currentScrollTop = bottomScroller.current.scrollTop;
+    let distance =
+      direction === "up" ? -currentScrollTop : targetHeight - currentScrollTop;
+    const steps = 30; // Adjust the number of steps for smoothness
+    const scrollStep = distance / steps;
 
-  const scrollAnimation = () => {
-    if (
-      (direction === "up" && distance >= 0) ||
-      (direction === "down" && distance <= 0)
-    ) {
-      return;
-    }
+    const scrollAnimation = () => {
+      if (
+        (direction === "up" && distance >= 0) ||
+        (direction === "down" && distance <= 0)
+      ) {
+        return;
+      }
 
-    bottomScroller.current.scrollTop += scrollStep;
-    distance -= scrollStep;
+      bottomScroller.current.scrollTop += scrollStep;
+      distance -= scrollStep;
 
-    // Check if reached the bottom
-    if (direction === "down" && bottomScroller.current.scrollTop + bottomScroller.current.clientHeight >= targetHeight) {
-      return;
-    }
+      // Check if reached the bottom
+      if (
+        direction === "down" &&
+        bottomScroller.current.scrollTop +
+          bottomScroller.current.clientHeight >=
+          targetHeight
+      ) {
+        return;
+      }
 
-    animationRef.current = requestAnimationFrame(scrollAnimation);
+      animationRef.current = requestAnimationFrame(scrollAnimation);
+    };
+
+    scrollAnimation();
   };
 
-  scrollAnimation();
-};
+  // call the necessary actions from the redux state to set the heights
+  //  of the containers and calculate the height of the bottom scroller
+  const handleResize = () => {
+    // This function will be called whenever the window size changes
+    dispatch(
+      setTopHeightSecond(
+        splashFirstTopHeight.current.offsetHeight +
+          splashSecondTopHeight.current.offsetHeight +
+          60
+      )
+    );
+    dispatch(setHeightOfBottomScroller());
+  };
 
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="splash">
-      <div
-        className="splash__top"
-        ref={splashFirstTopHeight}
-      >
+      <div className="splash__top" ref={splashFirstTopHeight}>
         <BackgroundSVG />
         <CrawlingSVG />
       </div>

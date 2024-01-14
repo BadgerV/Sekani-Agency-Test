@@ -13,6 +13,8 @@ const initialState = {
   isLoading: true,
 };
 
+// For the section scroller section, two approaches were considered. The first involves setting fixed heights for each stacked container, calculating the total height, and applying it as inline styling. However, this method may pose responsiveness challenges. Alternatively, the useRef hook dynamically calculates heights without explicit setting, allowing for a responsive and dynamic page. The useEffect hook is employed to recalculate heights on window resize, ensuring responsiveness.
+
 export const generalSlice = createSlice({
   name: "generalSlice",
   initialState,

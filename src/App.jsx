@@ -26,11 +26,15 @@ function App() {
 
   const isLoading = useSelector((state) => state.general.isLoading);
 
+  //mock loading functionality
   useEffect(() => {
     setTimeout(() => {
       dispatch(setLoading(false));
     }, 2000);
   }, []);
+
+  // call the necessary actions from the redux state to set the heights
+  //  of the containers and calculate the height of the bottom scroller
 
   useEffect(() => {
     if (isLoading === false) {
@@ -40,6 +44,22 @@ function App() {
       dispatch(setHeightOfBottomScroller());
     }
   }, [isLoading]);
+
+  const handleResize = () => {
+    // This function will be called whenever the window size changes
+    dispatch(setHeightOfScreen(appRef.current?.offsetHeight));
+    dispatch(setTopHeightFirst(topRef.current?.offsetHeight));
+    dispatch(setHeightOfFooter(footerRef.current?.offsetHeight));
+  };
+
+  //useEffect to monitor screen changes
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="App">
