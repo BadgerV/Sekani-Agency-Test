@@ -10,14 +10,14 @@
 - Redux Toolkit -[Enhance scalability and eliminate prop drilling with efficient state management]
 
 ## Demo.
-![Vite + React - Google Chrome 1_14_2024 2_39_54 PM](https://github.com/BadgerV/lendsqr-fe-test/assets/98065344/a57005f4-9eba-4313-92ef-a7668c384ec1)
+![Vite + React - Google Chrome 1_14_2024 2_39_54 PM](https://github.com/BadgerV/lendsqr-fe-test/assets/98065344/6cc005cf-c1bd-41e3-a7ff-efae05b57cdb)
 
-![Vite + React - Google Chrome 1_14_2024 2_40_09 PM](https://github.com/BadgerV/lendsqr-fe-test/assets/98065344/f0cb7346-a64b-41bf-b14b-c52937c62643)
+![Vite + React - Google Chrome 1_14_2024 2_40_09 PM](https://github.com/BadgerV/lendsqr-fe-test/assets/98065344/cbd50325-f461-4c22-a198-72a4c9fcbc61)
 
 * git clone the repository.
 
 ```
-  $ git clone [https://github.com/BadgerV/lendsqr-fe-test.git](https://github.com/BadgerV/Sekani-Agency-Test.git)
+  $ git clone https://github.com/BadgerV/Sekani-Agency-Test.git
 ```
 
 - open `Sekani-Agency-Test`.
