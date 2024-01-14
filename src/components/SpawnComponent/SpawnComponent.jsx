@@ -13,7 +13,7 @@ const SpawnComponent = ({ img, name, price, color }) => {
   return (
     <div className="spawn__component">
       <div className="spawn__component--left">
-        <img src={selectedImage} alt="" />{" "}
+        <img src={selectedImage} alt="" />
       </div>
       <div className="spawn__component--middle">
         <span>{name}</span>

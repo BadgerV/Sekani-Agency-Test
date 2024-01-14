@@ -37,6 +37,7 @@ span {
 
 .App {
   width: min(2000px, 100vw);
+  min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;
   margin: auto;

@@ -1,13 +1,9 @@
 import "./SimpleSVG.css";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 export const BackgroundSVG = () => {
   const lineRef = useRef(null);
 
-  useEffect(() => {
-    const lineLength = lineRef.current.getTotalLength();
-    console.log("Line Length:", lineLength);
-  }, []);
   return (
     <div>
       <svg

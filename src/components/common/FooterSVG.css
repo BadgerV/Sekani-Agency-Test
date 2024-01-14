@@ -1,0 +1,17 @@
+.footer__svg div {
+  position: relative;
+  z-index: 1;
+}
+
+.footer__svg div svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.footer__svg--second {
+  stroke-dasharray: 1991.6153564453125;
+  stroke-dashoffset: 1991.6153564453125;
+  animation: dash 20s linear forwards infinite;
+}

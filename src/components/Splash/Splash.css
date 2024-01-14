@@ -1,10 +1,15 @@
 .splash {
   background-color: var(--accent-color);
   padding-top: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .splash__top {
   position: relative;
+  width: 100%;
 }
 
 .splash__middle {
@@ -28,6 +33,7 @@
   color: var(--primary-color);
   font-weight: bold;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .splash__middle--left img {
@@ -46,6 +52,7 @@
 }
 
 .splash__bottom {
+  max-width: 100vw;
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
@@ -53,5 +60,39 @@
   justify-content: center;
   gap: 1rem;
   overflow-y: scroll;
+  overflow-x: hidden;
+
+  padding: 0 5rem;
+  padding-bottom: rem;
+  width: 95%;
+  max-width: 100vw;
+
+  position: relative;
 }
 
+.scroll--buttons {
+  position: fixed;
+
+  left: 90%;
+  padding: 0.5rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scroll--buttons svg {
+  font-size: 2rem;
+  fill: white;
+  border-radius: 50%;
+  /* padding: 2rem; */
+  background-color: var(--primary-color);
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 740px) {
+  .splash__middle--right {
+    display: none;
+  }
+}

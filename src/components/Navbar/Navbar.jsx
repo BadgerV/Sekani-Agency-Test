@@ -59,6 +59,10 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
+      <div className="navbar-mobile-nav">
+        <Dropdown title="All" />
+        <Dropdown title="Filter" />
+      </div>
       <div className="navbar__bottom">
         <div className="navbar__bottom--left">
           <button className="navbar__bottom--left--button">Aves</button>

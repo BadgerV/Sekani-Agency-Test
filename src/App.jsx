@@ -2,18 +2,42 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Splash from "./components/Splash/Splash";
 
-function App() {
-  // const lineRef = useRef(null);
+import { useEffect, useRef } from "react";
 
-  // useEffect(() => {
-  //   const lineLength = lineRef.current.getTotalLength();
-  //   console.log("Line Length:", lineLength);
-  // }, []);
+import { useDispatch } from "react-redux";
+import {
+  setHeightOfBottomScroller,
+  setHeightOfFooter,
+  setHeightOfScreen,
+  setTopHeightFirst,
+} from "./redux/slices/generalSlice";
+import Footer from "./components/Footer/Footer";
+
+function App() {
+  const dispatch = useDispatch();
+  const appRef = useRef(null);
+  const topRef = useRef(null);
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    dispatch(setHeightOfScreen(appRef.current.offsetHeight));
+    dispatch(setTopHeightFirst(topRef.current.offsetHeight));
+    dispatch(setHeightOfFooter(footerRef.current.offsetHeight));
+
+    // console.log(appRef.current.offsetHeight, topRef.current.offsetHeight);
+
+    dispatch(setHeightOfBottomScroller());
+  }, []);
 
   return (
-    <div className="App">
-      <Navbar />
+    <div className="App" ref={appRef}>
+      <div className="app--top" ref={topRef}>
+        <Navbar />
+      </div>
       <Splash />
+      <div className="app-footer" ref={footerRef}>
+        <Footer />
+      </div>
     </div>
   );
 }
