@@ -9,20 +9,15 @@
 - SCSS - [For styling]
 - Redux Toolkit -[Enhance scalability and eliminate prop drilling with efficient state management]
 
-```
-
 ## Demo.
-![Vite + React - Google Chrome 1_14_2024 2_40_09 PM](https://github.com/BadgerV/lendsqr-fe-test/assets/98065344/d4b8b251-349f-43a2-ab12-a1903037f07e)
+![Vite + React - Google Chrome 1_14_2024 2_39_54 PM](https://github.com/BadgerV/lendsqr-fe-test/assets/98065344/a57005f4-9eba-4313-92ef-a7668c384ec1)
 
-
-![Vite + React - Google Chrome 1_14_2024 2_39_54 PM](https://github.com/BadgerV/lendsqr-fe-test/assets/98065344/4b85be59-ecec-472e-8414-1f407b901dd4)
-
-## Run Web App on Local Environment.
+![Vite + React - Google Chrome 1_14_2024 2_40_09 PM](https://github.com/BadgerV/lendsqr-fe-test/assets/98065344/f0cb7346-a64b-41bf-b14b-c52937c62643)
 
 * git clone the repository.
 
 ```
-  $ git clone https://github.com/BadgerV/Sekani-Agency-Test.git
+  $ git clone [https://github.com/BadgerV/lendsqr-fe-test.git](https://github.com/BadgerV/Sekani-Agency-Test.git)
 ```
 
 - open `Sekani-Agency-Test`.
