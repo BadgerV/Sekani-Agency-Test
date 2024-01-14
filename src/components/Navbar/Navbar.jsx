@@ -9,11 +9,17 @@ import Dropdown from "../Dropdown/Dropdown";
 import CleaningServicesIcon from "@mui/icons-material/CleaningServices";
 
 const Navbar = () => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isCheckedFirst, setIsCheckedFirst] = useState(false);
+  const [isCheckedSecond, setIsCheckedSecond] = useState(false);
 
-  const handleClick = () => {
-    setIsChecked(!isChecked);
+  const handleClickFirst = () => {
+    setIsCheckedFirst(!isCheckedFirst);
   };
+
+  const handleClickSecond = () => {
+    setIsCheckedSecond(!isCheckedSecond);
+  };
+
   return (
     <div className="navbar">
       <div className="navbar__top">
@@ -81,19 +87,19 @@ const Navbar = () => {
           <Dropdown title={"Feet"} />
         </div>
         <div className="navbar__bottom--right">
-          <div className="navbar__bottom--right--item">
-            <div
-              className={`${isChecked ? "checked" : ""}`}
-              onClick={handleClick}
-            ></div>
+          <div
+            className="navbar__bottom--right--item"
+            onClick={handleClickFirst}
+          >
+            <div className={`${isCheckedFirst ? "checked" : ""}`}></div>
             <span>Egg</span>
           </div>
 
-          <div className="navbar__bottom--right--item">
-            <div
-              className={`${isChecked ? "checked" : ""}`}
-              onClick={handleClick}
-            ></div>
+          <div
+            className="navbar__bottom--right--item"
+            onClick={handleClickSecond}
+          >
+            <div className={`${isCheckedSecond ? "checked" : ""}`}></div>
             <span>Adult</span>
           </div>
 

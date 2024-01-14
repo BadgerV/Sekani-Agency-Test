@@ -24,6 +24,7 @@
 
 body {
   font-family: "Trebuchet MS", sans-serif;
+  background-color: var(--accent-color);
 }
 
 button {

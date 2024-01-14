@@ -8,6 +8,8 @@ const initialState = {
   },
   heightOfFooter: 0,
   heightOfBottomScroller: 0,
+
+  //initializes isLoading to true for demo purposes
   isLoading: true,
 };
 
@@ -27,6 +29,7 @@ export const generalSlice = createSlice({
     setHeightOfFooter: (state, action) => {
       state.heightOfFooter = action.payload;
     },
+    //set the height of the bottom scroller because of different screen sizes(height)
     setHeightOfBottomScroller: (state) => {
       state.heightOfBottomScroller =
         state.heightOfScreen -
