@@ -1,0 +1,40 @@
+.loading__component {
+  background-image: url(../../assets/load-screen.png);
+  height: 100vh;
+  width: min(2000px, 100vw);
+
+  object-fit: contain;
+  background-size: 100%;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading__component img {
+  max-width: 30.333%;
+}
+
+.loading__component--second {
+    color: red;
+}
+
+@media screen and (max-width: 730px) {
+  .loading__component {
+    background-image: none;
+    background-color: var(--accent-color);
+  }
+  .loading__component--first {
+    display: none;
+  }
+  .loading__component--third {
+    display: none;
+  }
+
+  .loading__component--second {
+    min-width: 90%;
+  }
+}

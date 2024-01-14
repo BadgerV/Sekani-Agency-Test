@@ -5,12 +5,10 @@
 
 .navbar__top {
   background-color: var(--tertiary-color);
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 3rem 0.5rem 3rem;
 }
 
@@ -21,25 +19,20 @@
 .navbar__top--middle {
   flex: 1;
   margin-left: 5rem;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-
   padding: 0.2rem 0;
 }
 
 .navbar__top--middle button {
   height: 3rem;
   padding: 0 2rem;
-
   display: flex;
   align-items: center;
   gap: 0.3rem;
-
   font-weight: bold;
-
   transition: 0.2s all ease-in-out;
 }
 
@@ -75,6 +68,7 @@
   padding: 0 0 0.5rem 0;
   padding-left: 10rem;
 }
+
 .navbar__middle--links--list {
   display: flex;
   flex-direction: row;
@@ -89,9 +83,7 @@
   background: transparent;
   padding: 0.8rem 1.5rem;
   border-radius: 5px;
-
   transition: 0.3s all ease-in-out;
-
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -112,7 +104,6 @@
   justify-content: space-between;
   padding: 1rem 2rem;
   align-items: center;
-
   display: none;
 }
 
@@ -132,7 +123,6 @@
   flex-wrap: wrap;
   column-gap: 3rem;
   row-gap: 1rem;
-
   background-color: var(--sixth-color);
   padding: 1rem;
 }
@@ -142,23 +132,21 @@
   flex-direction: row;
   gap: 0.3rem;
   padding: 0.2rem;
-
   background-color: var(--accent-color);
 }
 
 .navbar__bottom--left > * {
   padding: 0.5rem 1.3rem;
   background-color: var(--seventh-color);
-  color: var(--secondary-text-color);
+  color: var(--primary-color-transparent);
   font-weight: bold;
   border-radius: 5px;
-
   transition: 0.2s all ease-in-out;
 }
 
 .navbar__bottom--left > *:hover {
   color: white;
-  background-color: var(--ninth-color);
+  background-color: var(--eighth-color);
 }
 
 .navbar__bottom--middle {
@@ -204,13 +192,11 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--accent-color);
-
   height: 2rem;
   width: 5rem;
   padding-left: 0.4rem;
   border-radius: 5px;
   gap: 0.5rem;
-
   cursor: pointer;
 }
 
@@ -218,19 +204,18 @@
   height: 100%;
   width: 2rem;
   border-radius: 5px;
-
-  background-color: var(--ninth-color);
-
+  background-color: var(--eighth-color);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .navbar__bottom--right--special--item svg {
   fill: var(--primary-color);
 }
 
 .navbar__bottom--right--special--item span {
-  color: var(--secondary-text-color);
+  color: var(--primary-color-transparent);
   background-color: var(--eight-color);
   font-size: 0.9rem;
 }
@@ -242,22 +227,24 @@
     justify-content: center;
   }
 }
+
 @media screen and (max-width: 730px) {
   .navbar__top--middle {
     display: none;
   }
 }
+
 @media screen and (max-width: 580px) {
-  .navbar__middle {
-    display: none;
-  }
+  .navbar__middle,
   .navbar__bottom {
     display: none;
   }
+
   .navbar-mobile-nav {
     display: flex;
   }
 }
+
 @media screen and (max-width: 500px) {
   .navbar__top {
     padding: 0.5rem 1rem 0.5rem 1rem;

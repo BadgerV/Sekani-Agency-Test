@@ -8,7 +8,7 @@ const initialState = {
   },
   heightOfFooter: 0,
   heightOfBottomScroller: 0,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const generalSlice = createSlice({
@@ -28,13 +28,14 @@ export const generalSlice = createSlice({
       state.heightOfFooter = action.payload;
     },
     setHeightOfBottomScroller: (state) => {
-      state.isLoading = true;
       state.heightOfBottomScroller =
         state.heightOfScreen -
         state.topHeight.first -
         state.topHeight.second -
         state.heightOfFooter;
-      state.isLoading = false;
+    },
+    setLoading: (state, action) => {
+      state.isLoading = action.payload;
     },
   },
 });
@@ -45,6 +46,7 @@ export const {
   setTopHeightSecond,
   setHeightOfBottomScroller,
   setHeightOfFooter,
+  setLoading,
 } = generalSlice.actions;
 
 export default generalSlice.reducer;

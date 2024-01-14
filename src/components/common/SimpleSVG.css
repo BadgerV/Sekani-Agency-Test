@@ -10,7 +10,7 @@
 .second-svg {
   stroke-dasharray: 1991.6153564453125;
   stroke-dashoffset: 1991.6153564453125;
-  animation: dash 20s linear forwards infinite;
+  animation: dash 50s linear forwards infinite;
 }
 
 @keyframes dash {

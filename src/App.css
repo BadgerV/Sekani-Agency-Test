@@ -1,40 +1,3 @@
-/* .cont {
-  position: relative;
-  margin-top: 5rem;
-}
-
-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.second {
-  stroke-dasharray: 1730.5675048828125;
-  stroke-dashoffset: 1730.5675048828125;
-  animation: dash 20s linear forwards infinite;
-}
-
-.first polyline {
-  stroke: black !important;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.another-div {
-  position: relative;
-  top: 3rem;
-}
-
-span {
-  display: block;
-  text-align: center;
-} */
-
 .App {
   width: min(2000px, 100vw);
   min-height: 100vh;
@@ -42,3 +5,4 @@ span {
   overflow: hidden;
   margin: auto;
 }
+

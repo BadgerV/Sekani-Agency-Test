@@ -13,5 +13,12 @@
 .footer__svg--second {
   stroke-dasharray: 1991.6153564453125;
   stroke-dashoffset: 1991.6153564453125;
-  animation: dash 20s linear forwards infinite;
+  animation: dash 40s linear forwards infinite;
+}
+
+/* Animation Keyframes */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

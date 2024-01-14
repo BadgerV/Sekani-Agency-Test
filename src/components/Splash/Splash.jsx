@@ -38,29 +38,35 @@ const Splash = () => {
   }, [dispatch, splashFirstTopHeight, splashSecondTopHeight]);
 
   const scrollHandler = (direction) => {
-    const targetHeight = bottomScroller.current.scrollHeight;
-    const currentScrollTop = bottomScroller.current.scrollTop;
-    let distance =
-      direction === "up" ? -currentScrollTop : targetHeight - currentScrollTop;
-    const steps = 30; // Adjust the number of steps for smoothness
-    const scrollStep = distance / steps;
+  const targetHeight = bottomScroller.current.scrollHeight;
+  const currentScrollTop = bottomScroller.current.scrollTop;
+  let distance =
+    direction === "up" ? -currentScrollTop : targetHeight - currentScrollTop;
+  const steps = 30; // Adjust the number of steps for smoothness
+  const scrollStep = distance / steps;
 
-    const scrollAnimation = () => {
-      if (
-        (direction === "up" && distance >= 0) ||
-        (direction === "down" && distance <= 0)
-      ) {
-        return;
-      }
+  const scrollAnimation = () => {
+    if (
+      (direction === "up" && distance >= 0) ||
+      (direction === "down" && distance <= 0)
+    ) {
+      return;
+    }
 
-      bottomScroller.current.scrollTop += scrollStep;
-      distance -= scrollStep;
+    bottomScroller.current.scrollTop += scrollStep;
+    distance -= scrollStep;
 
-      animationRef.current = requestAnimationFrame(scrollAnimation);
-    };
+    // Check if reached the bottom
+    if (direction === "down" && bottomScroller.current.scrollTop + bottomScroller.current.clientHeight >= targetHeight) {
+      return;
+    }
 
-    scrollAnimation();
+    animationRef.current = requestAnimationFrame(scrollAnimation);
   };
+
+  scrollAnimation();
+};
+
 
   return (
     <div className="splash">
